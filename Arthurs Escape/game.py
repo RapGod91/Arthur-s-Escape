@@ -2,6 +2,8 @@ import pygame
 
 pygame.init()
 
+pygame.display.set_caption("Arthur's Escape")
+
 screen = pygame.display.set_mode((800,600))
 
 clock = pygame.time.Clock()
