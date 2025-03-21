@@ -34,8 +34,7 @@ class Game:
             'player/wall_slide': Animation(load_images('entities/player/wall_slide')),
         }
         
-        print(self.assets)
-        
+              
         self.clouds = Clouds(self.assets['clouds'], count=16)
         
         self.player = Player(self, (50, 50), (8, 15))
