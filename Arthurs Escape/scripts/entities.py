@@ -119,7 +119,7 @@ class Enemy(PhysicsEntity):
                         for i in range(4):
                             self.game.sparks.append(Spark(self.game.projectiles[-1][0], random.random() - 0.5, 2 + random.random()))
         elif random.random() < 0.01:  # Chance de começar a andar
-            self.walking = random.randint(30, 120)
+            self.walking = random.randint(40, 110)
         
         super().update(tilemap, movement=movement)
         
@@ -233,13 +233,13 @@ class Player(PhysicsEntity):
         if self.wall_slide:  # Wall jump
             if self.flip and self.last_movement[0] < 0:
                 self.velocity[0] = 3.5
-                self.velocity[1] = -2.5
+                self.velocity[1] = -3
                 self.air_time = 5
                 self.jumps = max(0, self.jumps - 1)
                 return True
             elif not self.flip and self.last_movement[0] > 0:
                 self.velocity[0] = -3.5
-                self.velocity[1] = -2.5
+                self.velocity[1] = -3
                 self.air_time = 5
                 self.jumps = max(0, self.jumps - 1)
                 return True
@@ -251,7 +251,7 @@ class Player(PhysicsEntity):
             return True
     
     def dash(self):
-        # Inicia o dash se não estiver em um
+        # Inicia o dash
         if not self.dashing:
             if self.flip:
                 self.dashing = -60
