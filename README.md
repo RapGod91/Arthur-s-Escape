@@ -2,6 +2,9 @@
 
 Um jogo de plataforma 2D com mecânicas de movimento avançadas (wall jump, dash), inimigos inteligentes e sistema de tilemap com autotile. Inclui um editor de mapas integrado.
 
+## Apresentação no Youtube
+https://youtu.be/gOiZL3lhTaU
+
 ## ✨ Funcionalidades
 - **Sistema de Física** com colisão
 - **Inimigos** com IA de patrulha e ataques a distância
